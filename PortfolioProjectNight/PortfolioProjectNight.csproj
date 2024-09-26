@@ -131,6 +131,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
+    <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
@@ -383,6 +384,8 @@
     <Content Include="Views\Skill\SkillList.cshtml" />
     <Content Include="Views\Skill\CreateSkill.cshtml" />
     <Content Include="Views\Skill\UpdateSkill.cshtml" />
+    <Content Include="Views\Experience\ExperienceList.cshtml" />
+    <Content Include="Views\Experience\CreateExperience.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
