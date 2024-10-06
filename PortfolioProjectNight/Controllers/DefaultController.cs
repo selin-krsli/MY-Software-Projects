@@ -12,7 +12,24 @@ namespace PortfolioProjectNight.Controllers
         DbMyPortfolioNightEntities1 context = new DbMyPortfolioNightEntities1 ();
         public ActionResult Index()
         {
+            List<SelectListItem> values = (from x in context.Category.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryId.ToString()
+                                           }).ToList();
+            ViewBag.V = values; 
             return View();
+        }
+        [HttpPost]
+        public ActionResult Index(Contact contact)
+        {
+            contact.SendDate = DateTime.Parse(DateTime.Now.ToString());
+            contact.IsRead = false;
+
+            context.Contact.Add(contact);
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
         public PartialViewResult PartialHead()
         {
@@ -52,6 +69,10 @@ namespace PortfolioProjectNight.Controllers
         {
             var values = context.Skill.Where(s=>s.Status==true).ToList();
             return PartialView(values);
+        }
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();
         }
     }
 }
