@@ -1,0 +1,24 @@
+﻿@model PortfolioProjectNight.Models.SocialMedia
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Sosyal Medya Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(s => s.SocialMediaID)
+    <label>Başlık</label>
+    @Html.TextBoxFor(s => s.Title, new { @class = "form-control" })
+    <br />
+    <label>Url</label>
+    @Html.TextBoxFor(s => s.Url, new { @class = "form-control" })
+    <br />
+    <label>Ikon</label>
+    @Html.TextBoxFor(s => s.Icon, new { @class = "form-control" })
+    <br />
+    <label>Durum</label>
+    @Html.DropDownListFor(s=>s.Durum, (IEnumerable<SelectListItem>)ViewBag.StatusList, new {@class="form-control"})
+    <br />
+    <button class="btn btn-success">Yetenek Güncelle</button>
+</form>
+

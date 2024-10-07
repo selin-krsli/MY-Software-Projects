@@ -45,8 +45,15 @@ namespace PortfolioProjectNight.Controllers
         [HttpPost]
         public ActionResult UpdateSkill(Skill skill)
         {
-            
-            return View();
+            var value = context.Skill.Find(skill.SkillId);
+            if(value != null)
+            {
+                value.SkillName = skill.SkillName;
+                value.Rate = skill.Rate;
+                value.Icon = skill.Icon;
+                context.SaveChanges();
+            }
+            return RedirectToAction("SkillList");
         }
     }
 }

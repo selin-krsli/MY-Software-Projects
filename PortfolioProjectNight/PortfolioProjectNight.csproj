@@ -145,6 +145,7 @@
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Controllers\TraineeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -558,6 +559,9 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\UpdateProfile.cshtml" />
     <Content Include="Views\Education\UpdateEducation.cshtml" />
+    <Content Include="Views\SocialMedia\SocialMediaList.cshtml" />
+    <Content Include="Views\SocialMedia\CreateSocialMedia.cshtml" />
+    <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
