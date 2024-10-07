@@ -1,0 +1,33 @@
+﻿@model List<PortfolioProjectNight.Models.Trainee>
+@{
+    ViewBag.Title = "TraineeList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Staj Yaptığım Yerlerin Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Açıklama</th>
+        <th>Staj Tarih Aralığı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.TraineeId</th>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Description</td>
+            <td>@item.DateRange</td>
+            <td><a href="/Trainee/DeleteTrainee/@item.TraineeId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Trainee/UpdateTrainee/@item.TraineeId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<td><a href="/Trainee/CreateTrainee/" class="btn btn-info">Yeni Staj Girişi</a></td>
+

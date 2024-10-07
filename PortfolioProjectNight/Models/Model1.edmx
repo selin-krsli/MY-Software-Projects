@@ -50,6 +50,7 @@
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
           <Property Name="SubTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateRange" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Experience">
           <Key>
@@ -59,6 +60,7 @@
           <Property Name="Title" Type="nvarchar" MaxLength="20" />
           <Property Name="SubTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="DateRange" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Expertise">
           <Key>
@@ -130,6 +132,16 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="Trainee">
+          <Key>
+            <PropertyRef Name="TraineeId" />
+          </Key>
+          <Property Name="TraineeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="DateRange" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <Association Name="FK_Contact_Category">
           <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
           <End Role="Contact" Type="Self.Contact" Multiplicity="*" />
@@ -156,6 +168,7 @@
           <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SocialMedia" EntityType="Self.SocialMedia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trainee" EntityType="Self.Trainee" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Contact_Category" Association="Self.FK_Contact_Category">
             <End Role="Category" EntitySet="Category" />
             <End Role="Contact" EntitySet="Contact" />
@@ -204,6 +217,7 @@
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateRange" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Experience">
           <Key>
@@ -213,6 +227,7 @@
           <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="SubTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DateRange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Expertise">
           <Key>
@@ -314,6 +329,7 @@
             <End Role="Contact" EntitySet="Contact" />
           </AssociationSet>
           <EntitySet Name="Admin" EntityType="DbMyPortfolioNightModel.Admin" />
+          <EntitySet Name="Trainee" EntityType="DbMyPortfolioNightModel.Trainee" />
         </EntityContainer>
         <EntityType Name="Admin">
           <Key>
@@ -322,6 +338,16 @@
           <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Trainee">
+          <Key>
+            <PropertyRef Name="TraineeId" />
+          </Key>
+          <Property Name="TraineeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SubTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DateRange" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -364,6 +390,7 @@
           <EntitySetMapping Name="Education">
             <EntityTypeMapping TypeName="DbMyPortfolioNightModel.Education">
               <MappingFragment StoreEntitySet="Education">
+                <ScalarProperty Name="DateRange" ColumnName="DateRange" />
                 <ScalarProperty Name="EducationId" ColumnName="EducationId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
@@ -374,6 +401,7 @@
           <EntitySetMapping Name="Experience">
             <EntityTypeMapping TypeName="DbMyPortfolioNightModel.Experience">
               <MappingFragment StoreEntitySet="Experience">
+                <ScalarProperty Name="DateRange" ColumnName="DateRange" />
                 <ScalarProperty Name="ExperienceId" ColumnName="ExperienceId" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
@@ -464,6 +492,17 @@
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trainee">
+            <EntityTypeMapping TypeName="DbMyPortfolioNightModel.Trainee">
+              <MappingFragment StoreEntitySet="Trainee">
+                <ScalarProperty Name="DateRange" ColumnName="DateRange" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SubTitle" ColumnName="SubTitle" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TraineeId" ColumnName="TraineeId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

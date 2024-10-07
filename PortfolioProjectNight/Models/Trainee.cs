@@ -12,9 +12,9 @@ namespace PortfolioProjectNight.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Experience
+    public partial class Trainee
     {
-        public int ExperienceId { get; set; }
+        public int TraineeId { get; set; }
         public string Title { get; set; }
         public string SubTitle { get; set; }
         public string Description { get; set; }

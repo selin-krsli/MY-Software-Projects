@@ -1,0 +1,23 @@
+﻿@model PortfolioProjectNight.Models.Trainee
+@{
+    ViewBag.Title = "CreateTrainee";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Yeni Staj Ekleme Sayfası</h2>
+<form method="post">
+    <label>Staj Başlığı</label>
+    @Html.TextBoxFor(s=>s.Title, new {@class="form-control"})
+    <br />
+    <label>Staj Alt Başlığı</label>
+    @Html.TextBoxFor(s=>s.SubTitle, new {@class="form-control"})
+    <br />
+    <label>Staj Açıklaması</label>
+    @Html.TextBoxFor(s=>s.Description, new {@class="form-control"})
+    <br />
+    <label>Staj Tarih Aralığı</label>
+    @Html.TextBoxFor(s=>s.DateRange, new {@class="form-control"})
+    <br />
+    <button class="btn btn-info">Stajı Oluştur</button>
+</form>
+
