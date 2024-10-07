@@ -1,4 +1,8 @@
-﻿@model List<PortfolioProjectNight.Models.Skill>
+﻿@using PagedList
+@using PagedList.Mvc
+@using PortfolioProjectNight.Models
+@model PagedList.IPagedList<Skill>
+
 @{
     ViewBag.Title = "SkillList";
     Layout = "~/Views/Admin/Index.cshtml";
@@ -6,7 +10,7 @@
 
 <h2 class="mb-4">Yetenek Listesi ve İşlemleri</h2>
 <table class="table table-striped">
-    <tr>
+    <tr style="background-color:cornflowerblue">
         <th>Id</th>
         <th>Başlık</th>
         <th>Değer</th>
@@ -24,4 +28,10 @@
         </tr>
     }
 </table>
+
 <td><a href="/Skill/CreateSkill/" class="btn btn-info">Yeni Yetenek Girişi</a></td>
+<br /><br />
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("SkillList", new { page }), new PagedListRenderOptions
+{
+    LiElementClasses = new List<string> { "page-link" }
+})
