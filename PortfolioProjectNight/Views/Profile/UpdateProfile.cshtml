@@ -1,0 +1,37 @@
+﻿@model PortfolioProjectNight.Models.Profile
+@{
+    ViewBag.Title = "UpdateProfile";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Profilim Yazısını Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(s => s.ProfileId)
+    <label>Doğum Tarihi</label>
+    @Html.TextBoxFor(s => s.Birthdate, new { @class = "form-control" })
+    <br />
+    <label>Email</label>
+    @Html.TextBoxFor(s => s.Email, new { @class = "form-control" })
+    <br />
+    <label>Telefon Numarası</label>
+    @Html.TextBoxFor(s => s.Phone, new { @class = "form-control" })
+    <br />
+    <label>Github Linki</label>
+    @Html.TextBoxFor(s => s.Github, new { @class = "form-control" })
+    <br />
+    <label>Adres Bilgisi</label>
+    @Html.TextBoxFor(s => s.Address, new { @class = "form-control" })
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(s => s.Title, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextBoxFor(s => s.Description, new { @class = "form-control" })
+    <br />
+    <label>Resim Yolu</label>
+    @Html.TextBoxFor(s => s.ImageUrl, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Profilim Yazısını Güncelle</button>
+</form>
+

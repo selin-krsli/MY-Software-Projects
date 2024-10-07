@@ -1,32 +1,32 @@
-﻿
+﻿@model List<PortfolioProjectNight.Models.Education>
 @{
     ViewBag.Title = "EducationList";
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
 <h2 class="mb-4">Eğitim Hayatım Listem</h2>
-    <table class="table table-bordered">
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Açıklama</th>
+        <th>Bulunulan Tarih Aralığı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>Id</th>
-            <th>Başlık</th>
-            <th>Alt Başlık</th>
-            <th>Sil</th>
-            <th>Güncelle</th>
+            <th>@item.EducationId</th>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Description</td>
+            <td>@item.DateRange</td>
+            <td><a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-success">Güncelle</a></td>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Çukurova Üniversitesi</td>
-            <td>Bilgisayar Mühendisliği</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-success">Güncelle</a></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>West Pomerian University of Technology</td>
-            <td>Computer Science and Information Technology</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-success">Güncelle</a></td>
-        </tr>
-    </table>
+    }
+</table>
     <a href="/Education/CreateEducation/" class="btn btn-info">Yeni Eğitim Bilgisi Girişi</a>
 

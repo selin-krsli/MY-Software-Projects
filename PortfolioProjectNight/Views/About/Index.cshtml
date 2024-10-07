@@ -1,8 +1,28 @@
-﻿
+﻿@model List<PortfolioProjectNight.Models.About>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h2>Index</h2>
+<h2 class="mb-4">Hakkımda Admin Sayfası</h2>
+<table class="table table-bordered">
+    <tr style="background-color:cornflowerblue">
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Resim Yolu</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.AboutId</th>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/About/UpdateAbout/@item.AboutId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
 

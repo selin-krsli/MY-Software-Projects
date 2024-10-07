@@ -1,0 +1,38 @@
+﻿@model List<PortfolioProjectNight.Models.Profile>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Profilim Admin Sayfası</h2>
+<table class="table table-bordered">
+    <tr style="background-color:cornflowerblue">
+        <th>#</th>
+        <th>Doğum Tarihi</th>
+        <th>Email</th>
+        <th>Telefon Numarası</th>
+        <th>Github Linki</th>
+        <th>Adres Bilgisi</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Resim Yolu</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ProfileId</th>
+            <td>@item.Birthdate</td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.Github</td>
+            <td>@item.Address</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td>@item.ImageUrl</td>
+            <td><a href="/Profile/UpdateProfile/@item.ProfileId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+

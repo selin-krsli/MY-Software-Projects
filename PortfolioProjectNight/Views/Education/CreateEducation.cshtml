@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "CreateEducation";
     Layout = "~/Views/Admin/Index.cshtml";
 }
@@ -7,13 +6,16 @@
 <h2 class="mb-4">Yeni Eğitim Bilgisi Girişi</h2>
 <form method="post">
     <label>Başlık</label>
-    <input type="text" class="form-control" />
+    <input type="text" class="form-control" name="Title" />
     <br />
     <label>Alt Başlık</label>
-    <input type="text" class="form-control" />
+    <input type="text" class="form-control" name="SubTitle" />
     <br />
     <label>Açıklama</label>
-    <textarea rows="4" class="form-control"></textarea>
+    <textarea rows="4" class="form-control" name="Description"></textarea>
+    <br />
+    <label>Bulunulan Tarih Aralığı</label>
+    <input type="text" class="form-control" name="DateRange" />
     <br />
     <button class="btn btn-info">Eğitim Bilgisini Kaydet</button>
 </form>
