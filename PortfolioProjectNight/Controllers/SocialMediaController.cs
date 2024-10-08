@@ -21,8 +21,8 @@ namespace PortfolioProjectNight.Controllers
             ViewBag.StatusList = new List<SelectListItem>
             {
                 new SelectListItem{ Text = "Seçim Yapınız..", Value = ""},
-                new SelectListItem{ Text = "Kullanılabiilir", Value = "True"},
-                new SelectListItem{ Text = "Kullanılamaz", Value = "False"}
+                new SelectListItem{ Text = "Aktif", Value = "True"},
+                new SelectListItem{ Text = "Pasif", Value = "False"}
             };
             return View();
         }
@@ -45,8 +45,8 @@ namespace PortfolioProjectNight.Controllers
             var value = context.SocialMedia.Find(id);
             ViewBag.StatusList = new List<SelectListItem>
             {
-                new SelectListItem{ Text = "Kullanılabilir", Value = "True"},
-                new SelectListItem{ Text = "Kullanılamaz", Value = "False"}
+                new SelectListItem{ Text = "Aktif", Value = "True"},
+                new SelectListItem{ Text = "Pasif", Value = "False"}
             };
             return View(value);
         }

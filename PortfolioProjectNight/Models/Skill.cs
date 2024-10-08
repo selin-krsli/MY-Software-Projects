@@ -11,11 +11,14 @@ namespace PortfolioProjectNight.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Skill
     {
         public int SkillId { get; set; }
+        [Required(ErrorMessage = "Yetenek Adýný Boþ Geçemezsiniz.")]
         public string SkillName { get; set; }
+        [Range(1,100,ErrorMessage ="Deðer aralýðý 1 ile 100 arasýnda olmalýdýr.")]
         public Nullable<byte> Rate { get; set; }
         public string Icon { get; set; }
         public Nullable<bool> Status { get; set; }

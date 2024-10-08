@@ -25,6 +25,10 @@ namespace PortfolioProjectNight.Controllers
         [HttpPost]
         public ActionResult CreateSkill(Skill skill)//parametre
         {
+            if(!ModelState.IsValid)
+            {
+                return View();
+            }
             context.Skill.Add(skill);
             context.SaveChanges();
             return RedirectToAction("SkillList");
