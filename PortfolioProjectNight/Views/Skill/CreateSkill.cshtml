@@ -3,19 +3,20 @@
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h2 class="mb-4">Yeni Yetenek Ekleme Sayfası</h2>
-<form method="post">
-    <label>Yetenek Başlığı</label>
-    <input type="text" name="SkillName" class="form-control" />
-     @Html.ValidationMessage("SkillName", "", new {@class="text-danger"})
-    <br />
-    <label>Yetenek Değeri</label>
-    <input type="number" name="Rate" class="form-control" />
-    @Html.ValidationMessage("Rate", "", new {@class="text-danger"})
-    <br />
-    <label>Yetenek Iconu</label>
-    <input type="text" name="Icon" class="form-control" />
-    <br />
-    <button class="btn btn-outline-info">Yetenek Ekle</button>
-</form>
+<h2 class="mb-4"></h2>
+<div class="alert alert-success">Yeni Yetenek Ekleme Sayfası</div>
+    <form method="post">
+        <label>Yetenek Başlığı</label>
+        <input type="text" name="SkillName" class="form-control" />
+        @Html.ValidationMessage("SkillName", "", new { @class = "text-danger" })
+        <br />
+        <label>Yetenek Değeri</label>
+        <input type="number" name="Rate" class="form-control" />
+        @Html.ValidationMessage("Rate", "", new { @class = "text-danger" })
+        <br />
+        <label>Yetenek Iconu</label>
+        <input type="text" name="Icon" class="form-control" />
+        <br />
+        <button class="btn btn-outline-info">Yetenek Ekle</button>
+    </form>
 

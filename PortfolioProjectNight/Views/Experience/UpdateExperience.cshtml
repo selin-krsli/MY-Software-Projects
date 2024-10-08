@@ -3,8 +3,7 @@
     ViewBag.Title = "UpdateExperience";
     Layout = "~/Views/Admin/Index.cshtml";
 }
-
-<h2 class="mb-4">Deneyim Güncelleme Sayfası</h2>
+<div class="alert alert-warning"><strong>Deneyim Güncelleme Sayfası</strong></div>
 <form method="post">
     @Html.HiddenFor(x=>x.ExperienceId)
     <label>Deneyim Başlığı</label>

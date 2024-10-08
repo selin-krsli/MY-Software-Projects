@@ -3,15 +3,15 @@
     ViewBag.Title = "CreatePortfolio";
     Layout = "~/Views/Admin/Index.cshtml";
 }
+<div class="alert alert-success"><strong>Portfolyo Ekleme Sayfası</strong></div>
 
-<h2 class="mb-4">Portfolyo Ekleme Sayfası</h2>
-<form method="post">
-    <label>Başlık</label>
-    @Html.TextBoxFor(s => s.Title, new { @class = "form-control" })
-    <br />
-    <label>Açıklama</label>
-    @Html.TextAreaFor(s => s.Description, new { @class = "form-control" })
-    <br />
-    <button class="btn btn-outline-info"">Portfolyo Ekle</button>
-</form>
+    <form method="post">
+        <label>Başlık</label>
+        @Html.TextBoxFor(s => s.Title, new { @class = "form-control" })
+        <br />
+        <label>Açıklama</label>
+        @Html.TextAreaFor(s => s.Description, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-outline-info" ">Portfolyo Ekle</button>
+    </form>
 

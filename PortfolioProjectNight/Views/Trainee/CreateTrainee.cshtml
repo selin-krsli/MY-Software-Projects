@@ -3,8 +3,7 @@
     ViewBag.Title = "CreateTrainee";
     Layout = "~/Views/Admin/Index.cshtml";
 }
-
-<h2 class="mb-4">Yeni Staj Ekleme Sayfası</h2>
+<div class="alert alert-success"><strong>Yeni Staj Ekleme Sayfası</strong></div>
 <form method="post">
     <label>Staj Başlığı</label>
     @Html.TextBoxFor(s=>s.Title, new {@class="form-control"})

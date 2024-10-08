@@ -3,8 +3,7 @@
     ViewBag.Title = "UpdateAbout";
     Layout = "~/Views/Admin/Index.cshtml";
 }
-
-<h2 class="mb-4">Hakkımda Yazısı Güncelleme Sayfası</h2>
+<div class="alert alert-warning"><strong>Hakkımda Yazısı Güncelleme Sayfası</strong></div>
 <form method="post">
     @Html.HiddenFor(s => s.AboutId)
     <label>Başlık</label>

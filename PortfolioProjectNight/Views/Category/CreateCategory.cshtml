@@ -1,15 +1,13 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/Admin/Index.cshtml";
 }
-<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-<div class="container">
-    <br /><br />
-    <div class="alert alert-success">Yeni Kategori Girişi</div>
+
+<div class="alert alert-success"><strong>Yeni Kategori Girişi</strong></div>
+<form method="post">
     <label>Kategori Adı</label>
-    <input type="text" class="form-control" />
+    <input type="text" name="CategoryName" class="form-control" />
     <br />
-    <label>Kategori Açıklaması</label>
-    <textarea rows="4" class="form-control"></textarea><br />
-    <button class="btn btn-primary">Kategoriyi oluştur</button>
-</div>
+    <button class="btn btn-outline-info">Yeni Kategori Girişi</button>
+</form>
+

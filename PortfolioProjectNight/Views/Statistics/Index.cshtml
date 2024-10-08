@@ -3,8 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Admin/Index.cshtml";
 }
-
-<h2 class="mb-4">İstatistikler</h2>
+<div class="alert alert-info h4"><strong>İstatistikler</strong></div>
 <div class="alert alert-success">Toplam Mesaj Sayısı: <b>@ViewBag.totalMessageCount</b></div>
 <div class="alert alert-danger">Okunmuş Mesaj Sayısı: <b>@ViewBag.messageIsReadTrueCount</b></div>
 <div class="alert alert-warning">Okunmamış Mesaj Sayısı: <b>@ViewBag.messageIsReadFalseCount</b></div>

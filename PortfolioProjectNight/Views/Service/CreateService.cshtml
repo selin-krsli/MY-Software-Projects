@@ -3,8 +3,7 @@
     ViewBag.Title = "CreateService";
     Layout = "~/Views/Admin/Index.cshtml";
 }
-
-<h2 class="mb-4">Yeni Hizmet Ekleme Sayfası</h2>
+<div class="alert alert-success"><strong>Yeni Hizmet Ekleme Sayfası</strong></div>
 <form method="post">
     <label>Başlık</label>
     @Html.TextBoxFor(s => s.Title, new { @class = "form-control" })

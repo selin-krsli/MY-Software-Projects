@@ -581,6 +581,7 @@
     <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
     <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
     <Content Include="Views\Skill\SkillChart.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

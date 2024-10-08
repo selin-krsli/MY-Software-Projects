@@ -3,8 +3,8 @@
     ViewBag.Title = "CreateTestimonial";
     Layout = "~/Views/Admin/Index.cshtml";
 }
+<div class="alert alert-success"><strong>Yeni Referans Ekleme Sayfası</strong></div>
 
-<h2 class="mb-4">Yeni Referans Ekleme Sayfası</h2>
 <form method="post">
     <label>Ad Soyad</label>
     @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
