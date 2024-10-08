@@ -303,6 +303,23 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\CreateSkill_2.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\CreateSocialMedia_2.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\Inbox_1.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\SkillChart_4.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\SkillList_1.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\SocialMediaList_1.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\TraineeList_1.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UI_1.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UI_2.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UI_3.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UI_4.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UI_5.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UI_6.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UI_7.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UpdateSkill_3.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UpdateSocialMedia_3.png" />
+    <Content Include="Content\Proje_Ekran_Goruntuleri\1-Portfolyo\UpdateTrainee_2.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
