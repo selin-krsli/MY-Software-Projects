@@ -12,7 +12,7 @@
     .staj{background-color:coral;}
 </style>
 <table class="table table-bordered">
-    <tr>
+    <tr style="background-color:cadetblue; color:white;">
         <th>#</th>
         <th>Gönderen</th>
         <th>Tarih</th>
@@ -25,27 +25,27 @@
         @foreach (var item in Model)
         {
             count++;
-            if(item.Subject=="Proje Talebi") { boxColor = "proje-talebi"; }
-            if(item.Subject=="Referans") { boxColor = "referans"; }
-            if(item.Subject=="Şikayet") { boxColor = "sikayet"; }
-            if(item.Subject=="Staj") { boxColor = "staj"; }
-            <tr>
-                <td>@count</td>
-                <td>@item.NameSurname</td>
-                <td>@item.SendDate</td>
-                <td class="@boxColor">@item.Subject</td>
-                @if (item.IsRead == false)
-                {
-                    <td><a href="/Message/ChangeMessageStatusToTrue/@item.ContactId" class="btn btn-info">Okundu Olarak İşaretle</a></td>
-                }
-                else
-                {
-                    <td><a href="/Message/ChangeMessageStatusToFalse/@item.ContactId" class="btn btn-dark">Okunmadı Olarak İşaretle</a></td>
-                }
-                <td><a href="#" class="btn btn-warning">Mesajı Aç</a></td>
-                <td><a href="#" class="btn btn-danger">Mesajı Sil</a></td>
-            </tr>
-        }
+            if (item.Subject == "Proje Talebi") { boxColor = "proje-talebi"; }
+            if (item.Subject == "Referans") { boxColor = "referans"; }
+            if (item.Subject == "Şikayet") { boxColor = "sikayet"; }
+            if (item.Subject == "Staj") { boxColor = "staj"; }
+        <tr>
+            <th>@count</th>
+            <td>@item.NameSurname</td>
+            <td>@item.SendDate</td>
+            <td><span class="@boxColor p-2" style="color:white; font-size:small">@item.Subject</span></td>
+            @if (item.IsRead == false)
+            {
+                <td><a href="/Message/ChangeMessageStatusToTrue/@item.ContactId" class="btn btn-outline-info">Okundu</a></td>
+            }
+            else
+            {
+                <td><a href="/Message/ChangeMessageStatusToFalse/@item.ContactId" class="btn btn-outline-dark">Okunmadı</a></td>
+            }
+            <td><a href="#" class="btn btn-outline-warning">Mesajı Aç</a></td>
+            <td><a href="#" class="btn btn-outline-danger">Mesajı Sil</a></td>
+        </tr>
+    }
 
-</table>
+    </table>
 

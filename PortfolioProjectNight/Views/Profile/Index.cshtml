@@ -6,13 +6,13 @@
 
 <h2 class="mb-4">Profil Bilgileri Sayfası</h2>
 <table class="table table-bordered">
-    <tr style="background-color:cornflowerblue">
+    <tr style="background-color:cadetblue; color:white;">
         <th>#</th>
-        <th>Doğum Tarihi</th>
+        <th>DoğumTarihi</th>
         <th>Email</th>
-        <th>Telefon Numarası</th>
+        <th>Telefon</th>
         <th>Github Linki</th>
-        <th>Adres Bilgisi</th>
+        <th>Adres</th>
         <th>Başlık</th>
         <th>Açıklama</th>
         <th>Resim Yolu</th>
@@ -30,7 +30,7 @@
             <td>@item.Title</td>
             <td>@item.Description</td>
             <td>@item.ImageUrl</td>
-            <td><a href="/Profile/UpdateProfile/@item.ProfileId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Profile/UpdateProfile/@item.ProfileId" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>

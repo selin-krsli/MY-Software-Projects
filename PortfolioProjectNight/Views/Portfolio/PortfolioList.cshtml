@@ -4,9 +4,9 @@
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h2 class="mb-4">Portfolyo Sayfası</h2>
+<h2 class="mb-4">Portfolyo Bilgileri</h2>
 <table class="table table-striped">
-    <tr style="background-color:cornflowerblue">
+    <tr style="background-color:cadetblue; color:white;">
         <th>#</th>
         <th>Başlık</th>
         <th>Açıklama</th>
@@ -19,11 +19,11 @@
             <td>@item.PortfolioID</td>
             <td>@item.Title</td>
             <td>@item.Description</td>
-            <td><a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Portfolio/UpdatePortfolio/@item.PortfolioID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Portfolio/DeletePortfolio/@item.PortfolioID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Portfolio/UpdatePortfolio/@item.PortfolioID" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
 
-<td><a href="/Portfolio/CreatePortfolio/" class="btn btn-info">Yeni Referanslarım Bilgisi Girişi</a></td>
+<td><a href="/Portfolio/CreatePortfolio/" class="btn btn-outline-info">Yeni Portfolyo Bilgisi Girişi</a></td>
 

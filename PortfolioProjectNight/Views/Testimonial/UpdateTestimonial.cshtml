@@ -14,12 +14,12 @@
     <label>Alt Başlık</label>
     @Html.TextBoxFor(s => s.SubTitle, new { @class = "form-control" })
     <br />
+    <label>ImageUrl</label>
+    @Html.TextBoxFor(s => s.ImageUrl, new { @class = "form-control" })
+    <br />
     <label>Yorum</label>
     @Html.TextAreaFor(s => s.Comment, new { @class = "form-control" })
     <br />
-    <label>ImageUrl</label>
-    @Html.TextBoxFor(s=>s.ImageUrl, new {@class="form-control"})
-    <br />
-    <button class="btn btn-success">Referans Güncelle</button>
+    <button class="btn btn-outline-success">Referans Güncelle</button>
 </form>
 

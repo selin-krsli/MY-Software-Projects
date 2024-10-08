@@ -6,7 +6,7 @@
 
 <h2 class="mb-4">Sosyal Medya Listesi ve İşlemleri</h2>
 <table class="table table-striped">
-    <tr style="background-color:cornflowerblue">
+    <tr style="background-color:cadetblue; color:white;">
         <th>#</th>
         <th>Başlık</th>
         <th>Url</th>
@@ -23,11 +23,11 @@
             <td>@item.Url</td>
             <td>@item.Icon</td>
             <td>@item.Durum</td>
-            <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
 
-<td><a href="/SocialMedia/CreateSocialMedia/" class="btn btn-info">Yeni Sosyal Medya Girişi</a></td>
+<td><a href="/SocialMedia/CreateSocialMedia/" class="btn btn-outline-info">Yeni Sosyal Medya Girişi</a></td>
 

@@ -4,7 +4,7 @@
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h2 class="mb-4">Hizmetlerim Güncelleme Sayfası</h2>
+<h2 class="mb-4">Hizmet Güncelleme Sayfası</h2>
 <form method="post">
     @Html.HiddenFor(s => s.ServiceId)
     <label>Başlık</label>
@@ -16,6 +16,6 @@
     <label>Açıklama</label>
     @Html.TextAreaFor(s => s.Description, new { @class = "form-control" })
     <br />
-    <button class="btn btn-success">Hizmet Güncelle</button>
+    <button class="btn btn-outline-success">Hizmet Güncelle</button>
 </form>
 

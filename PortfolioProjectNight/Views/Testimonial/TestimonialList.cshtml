@@ -6,8 +6,8 @@
 
 <h2 class="mb-4">Referanslarım Listesi ve İşlemleri</h2>
 <table class="table table-striped">
-    <tr style="background-color:cornflowerblue">
-        <th>Id</th>
+    <tr style="background-color:cadetblue; color:white;">
+        <th>#</th>
         <th>Ad Soyad</th>
         <th>Alt Başlık</th>
         <th>Yorum</th>
@@ -23,11 +23,11 @@
             <td>@item.SubTitle</td>
             <td>@item.Comment</td>
             <td>@item.ImageUrl</td>
-            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
 
-<td><a href="/Testimonial/CreateTestimonial/" class="btn btn-info">Yeni Referans Girişi</a></td>
+<td><a href="/Testimonial/CreateTestimonial/" class="btn btn-outline-info">Yeni Referans Girişi</a></td>
 

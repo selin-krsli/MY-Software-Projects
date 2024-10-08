@@ -6,7 +6,7 @@
 
 <h2 class="mb-4">Hizmetlerim Sayfası</h2>
 <table class="table table-striped">
-    <tr style="background-color:cornflowerblue">
+    <tr style="background-color:cadetblue; color:white;">
         <th>#</th>
         <th>Başlık</th>
         <th>Ikon</th>
@@ -21,11 +21,11 @@
             <td>@item.Title</td>
             <td>@item.Icon</td>
             <td>@item.Description</td>
-            <td><a href="/Service/DeleteService/@item.ServiceId" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Service/UpdateService/@item.ServiceId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Service/DeleteService/@item.ServiceId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Service/UpdateService/@item.ServiceId" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
 
-<td><a href="/Service/CreateService/" class="btn btn-info">Yeni Hizmetlerim Bilgisi Girişi</a></td>
+<td><a href="/Service/CreateService/" class="btn btn-outline-info">Yeni Hizmet Bilgisi Girişi</a></td>
 

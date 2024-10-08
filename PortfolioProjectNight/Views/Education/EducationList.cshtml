@@ -6,12 +6,12 @@
 
 <h2 class="mb-4">Eğitim Hayatım Listem</h2>
 <table class="table table-striped">
-    <tr style="background-color:cornflowerblue">
+    <tr style="background-color:cadetblue; color:white;">
         <th>#</th>
         <th>Başlık</th>
         <th>Alt Başlık</th>
         <th>Açıklama</th>
-        <th>Bulunulan Tarih Aralığı</th>
+        <th>Tarih Aralığı</th>
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
@@ -23,10 +23,10 @@
             <td>@item.SubTitle</td>
             <td>@item.Description</td>
             <td>@item.DateRange</td>
-            <td><a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-outline-success">Güncelle</a></td>
         </tr>
     }
 </table>
-    <a href="/Education/CreateEducation/" class="btn btn-info">Yeni Eğitim Bilgisi Girişi</a>
+    <a href="/Education/CreateEducation/" class="btn btn-outline-info">Yeni Eğitim Bilgisi Girişi</a>
 
