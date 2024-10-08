@@ -12,7 +12,7 @@ namespace PortfolioProjectNight.Controllers
         DbMyPortfolioNightEntities1 context = new DbMyPortfolioNightEntities1();
         public ActionResult SocialMediaList()
         {
-            var values = context.SocialMedia.Where(s=>s.Durum==true).ToList();
+            var values = context.SocialMedia.ToList();
             return View(values);
         }
         [HttpGet]

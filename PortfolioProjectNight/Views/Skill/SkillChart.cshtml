@@ -3,7 +3,7 @@
     ViewBag.Title = "SkillChart";
     Layout = "~/Views/Admin/Index.cshtml";
 }
-<div class="alert alert-info"><strong>Yetenek Oranları</strong></div>
+<div class="alert alert-info"><strong>Yetenek Dereceleri</strong></div>
 
 <!DOCTYPE html>
 <html>
@@ -29,9 +29,9 @@ const data = google.visualization.arrayToDataTable([
 
 // Set Options
 const options = {
-    title: 'Yetenek Oranları',
+    title: 'Yetenek Dereceleri',
     hAxis: { title: 'Yetenek' },
-    vAxis: { title: 'Oranları' },
+    vAxis: { title: 'Dereceleri' },
     legend: { position: 'none' },
     colors: ['#5f9ea0']
 };
