@@ -52,12 +52,15 @@ namespace PortfolioProjectNight.Controllers
             ViewBag.Phone = context.Profile.Select (s=>s.Phone).FirstOrDefault();
             ViewBag.Github = context.Profile.Select (s=>s.Github).FirstOrDefault();
             ViewBag.ImageUrl = context.Profile.Select (s=>s.ImageUrl).FirstOrDefault();
-
-            return PartialView();
+            var values = context.SocialMedia.Where(s=>s.Durum==true).ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialAbout()
         {
-            var values = context.About.ToList();
+            ViewBag.Title = context.About.Select(s=>s.Title).FirstOrDefault();
+            ViewBag.Description = context.About.Select (s=>s.Description).FirstOrDefault();
+            ViewBag.ImageUrl = context.About.Select(s => s.ImageUrl).FirstOrDefault();
+            var values = context.SocialMedia.Where(s => s.Durum == true).ToList();
             return PartialView(values);
         }
         public PartialViewResult PartialExperience()
@@ -72,7 +75,8 @@ namespace PortfolioProjectNight.Controllers
         }
         public PartialViewResult PartialFooter()
         {
-            return PartialView();
+            var values = context.SocialMedia.Where(s => s.Durum == true).ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialEducation()
         {
