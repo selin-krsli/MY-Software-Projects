@@ -55,5 +55,10 @@ namespace PortfolioProjectNight.Controllers
             }
             return RedirectToAction("SkillList");
         }
+        public ActionResult SkillChart()
+        {
+            var values = context.Skill.ToList();
+            return View(values);
+        }
     }
 }

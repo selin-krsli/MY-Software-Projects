@@ -1,0 +1,51 @@
+﻿@model List<PortfolioProjectNight.Models.Skill>
+@{
+    ViewBag.Title = "SkillChart";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<body>
+    <div id="myChart" style="width:100%; max-width:1000px; height:800px;"></div>
+
+    <script>
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+// Set Data
+const data = google.visualization.arrayToDataTable([
+  ['Skilll', 'Rate'],
+@foreach (var item in Model)
+{
+    @: ['@item.SkillName', @item.Rate],
+}
+]);
+
+// Set Options
+const options = {
+    title: 'Yetenek Oranları',
+    hAxis: { title: 'Yetenek' },
+    vAxis: { title: 'Oranları' },
+    legend: { position: 'none' },
+    colors: ['#f274a7']
+};
+
+// Draw
+const chart = new google.visualization.BarChart(document.getElementById('myChart'));
+chart.draw(data, options);
+
+}
+    </script>
+
+</body>
+</html>
+
+
+
+
+
