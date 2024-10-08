@@ -3,7 +3,14 @@
     ViewBag.Title = "Inbox";
     Layout = "~/Views/Admin/Index.cshtml";
     int count = 0;
+    string boxColor = "";
 }
+<style>
+    .proje-talebi{background-color:cornflowerblue;}
+    .referans{background-color:burlywood;}
+    .sikayet{background-color:darkolivegreen;}
+    .staj{background-color:coral;}
+</style>
 <table class="table table-bordered">
     <tr>
         <th>#</th>
@@ -18,11 +25,15 @@
         @foreach (var item in Model)
         {
             count++;
+            if(item.Subject=="Proje Talebi") { boxColor = "proje-talebi"; }
+            if(item.Subject=="Referans") { boxColor = "referans"; }
+            if(item.Subject=="Şikayet") { boxColor = "sikayet"; }
+            if(item.Subject=="Staj") { boxColor = "staj"; }
             <tr>
                 <td>@count</td>
                 <td>@item.NameSurname</td>
                 <td>@item.SendDate</td>
-                <td>@item.Subject</td>
+                <td class="@boxColor">@item.Subject</td>
                 @if (item.IsRead == false)
                 {
                     <td><a href="/Message/ChangeMessageStatusToTrue/@item.ContactId" class="btn btn-info">Okundu Olarak İşaretle</a></td>
